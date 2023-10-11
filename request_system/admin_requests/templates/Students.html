@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #f4f4f8;
+            font-family: Arial, sans-serif;
+        }
+
+        h1, h2 {
+            color: #318CE7; /* Blue De France for headings */
+        }
+
+        .table th, .table td {
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table th {
+            background-color: #318CE7;
+            color: white;
+        }
+
+        .btn-back {
+            background-color: #318CE7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <h1>Student Dashboard</h1>
+            <a href="teamLead.html" class="btn-back">Back to Team Lead</a>
+        </div>
+        <h2>All Student Requests</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Sender</th>
+                    <th>Date</th>
+                    <th>Topic</th>
+                    <th>Status</th>
+                    <th>Facilitator Assigned</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows (hardcoded for demonstration) -->
+                <tr>
+                    <td>Student A</td>
+                    <td>10/2/2023</td>
+                    <td>Topic Z</td>
+                    <td>Pending</td>
+                    <td>Facilitator A</td>
+                    <td><a href="index.html">View</a></td>
+                </tr>
+                <tr>
+                    <td>Student B</td>
+                    <td>10/2/2023</td>
+                    <td>Topic W</td>
+                    <td>Approved</td>
+                    <td>Facilitator B</td>
+                    <td><a href="index.html">View</a></td>
+                </tr>
+                <!-- Add more rows as necessary -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

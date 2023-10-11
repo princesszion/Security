@@ -91,14 +91,24 @@ class RegisterSerializer(serializers.ModelSerializer):
         # rep['country'] = instance.userprofile.country
         return rep
 
+# class AdminRequestSerializer(serializers.ModelSerializer):
+#     sender = serializers.PrimaryKeyRelatedField(read_only=True)
+#     recipient = serializers.PrimaryKeyRelatedField(read_only=True)
+#     class Meta:
+#         model = AdminRequest
+#         fields = '__all__'
+        
+#     def create(self, validated_data):
+#         user = self.context['request'].user
+#         validated_data['user'] = user
+#         return super().create(validated_data)
+
 class AdminRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdminRequest
         fields = '__all__'
         
     def create(self, validated_data):
-        user = self.context['request'].user
-        validated_data['user'] = user
-        return super().create(validated_data)
-
-    
+        user = self.context['request'].user  # Get the currently logged-in user
+        validated_data['sender'] = user  # Associate the request with the student
+        return super().create(validated_data)   
